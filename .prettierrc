@@ -1,0 +1,3 @@
+{
+  "prettier": "prettier --config .prettierrc 'src/**/*.ts' --write"
+}
