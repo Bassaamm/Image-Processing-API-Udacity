@@ -6,24 +6,24 @@
 
 ### Install Dependencies
 
-#### `npm i`
+#### ` npm i `
 
 ### Run the project
 
-#### `npm run start`
+#### ` npm run start `
 
 ### Build the project
 
-#### `npm run build`
+#### ` npm run build `
 
 ### test the project
 
-#### `npm run test`
+#### ` npm run test `
 
 ### Run eslint
 
-#### `npm run eslint`
+#### ` npm run eslint `
 
 ### Run Prettier
 
-#### `npm run prettier`
+#### ` npm run prettier `
