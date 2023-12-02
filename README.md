@@ -1,29 +1,34 @@
-# Image-Processig-API-Udacity
+# Image-Processig-API-Udacity Project
 
 ### Here is my solution for the project
 
-## Setup
+
+## ready endpoint to use to generate a resized photo from the assets 
+    $ http://localhost:3008/api/img?filename=icelandwaterfall&width=800&height=1000
+
+
+## Setup to run the project
 
 ### Install Dependencies
 
- $ npm i 
+    $ npm i 
 
 ### Run the project
 
- $ npm run start 
+    $ npm run start 
 
 ### Build the project
 
- $ npm run build
+    $ npm run build
 
 ### test the project
 
- $ npm run test
+    $ npm run test
 
 ### Run eslint
 
- $ npm run eslint
+    $ npm run eslint
 
 ### Run Prettier
 
- $ npm run prettier
+    $ npm run prettier
