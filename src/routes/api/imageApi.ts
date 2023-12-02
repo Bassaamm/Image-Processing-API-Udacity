@@ -1,18 +1,25 @@
 import express from "express";
-import sharp from "sharp";
 import fs from "fs";
+import { imageMiddleware } from "../../middleware/imageMiddleware";
+import { imageResize } from "../../healperFuncations";
+
 const imgRouter = express.Router();
 
-imgRouter.get("/", async (req, res) => {
+imgRouter.get("/", imageMiddleware, async (req, res) => {
   const params = req.query;
   const { filename, width, height } = params;
 
-  const imgagee = sharp(`assets/full/${filename}.jpg`)
-    .resize(Number(width), Number(height))
-    .toFile(`assets/thumb/${filename}-resized.jpg`);
+  try {
+    await imageResize(req);
+  } catch (err) {
+    console.log(err);
+  }
 
-  console.log(params);
-  res.send(imgagee);
+  const resizedImagesPath = `assets/thumb/${filename}-${width}-${height}.jpg`;
+  res
+    .contentType("image/jpg")
+    .status(200)
+    .send(fs.readFileSync(resizedImagesPath));
 });
 
 export default imgRouter;
