@@ -9,7 +9,7 @@ describe("Testing main app routes", () => {
     expect(res.status).toEqual(404);
   });
 
-  it("get / ", async () => {
+  it("GET / should return 200 because page exist ", async () => {
     const res = await request.get("/");
     expect(res.status).toEqual(200);
   });

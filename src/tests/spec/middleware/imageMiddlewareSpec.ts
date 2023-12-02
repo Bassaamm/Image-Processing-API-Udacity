@@ -6,7 +6,7 @@ import { imageMiddleware } from "../../../middleware/imageMiddleware"; // replac
 describe("Testing imageMiddlewasre", () => {
   let app: Express;
   let filename = "encenadaport";
-  let width = 300;
+  const width = 300;
   let height = 300;
   beforeEach(() => {
     app = express();
@@ -25,7 +25,7 @@ describe("Testing imageMiddlewasre", () => {
   });
 
   it("should return an error if the numbers is not positive", async () => {
-    let height = -300;
+    height = -300;
     const res = await request(app).get(
       `/api/img?filename=${filename}&width=${width}&height=${height}`,
     );
@@ -37,7 +37,7 @@ describe("Testing imageMiddlewasre", () => {
     const res = await request(app).get(
       `/api/img?filename=${filename}&width=${width}&height=${height}`,
     );
-    let find = fs.existsSync(`assets/full/${filename}.jpg`);
+    const find = fs.existsSync(`assets/full/${filename}.jpg`);
     expect(res.status).toBe(500);
     expect(find).toBeFalsy();
   });

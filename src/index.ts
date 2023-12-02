@@ -6,7 +6,7 @@ const port = 3008;
 app.use("/api", router);
 app.use(
   (
-    err: any,
+    err: Error,
     req: express.Request,
     res: express.Response,
     next: express.NextFunction,
