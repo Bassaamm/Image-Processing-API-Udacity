@@ -3,7 +3,7 @@
 ### Here is my solution for the project
 
 
-## ready endpoint to use to generate a resized photo from the assets 
+#### ready endpoint to use to generate a resized photo from the assets 
     $ http://localhost:3008/api/img?filename=icelandwaterfall&width=800&height=1000
 
 
@@ -24,6 +24,9 @@
 ### test the project
 
     $ npm run test
+### Run jasmine
+
+    $ npm run jasmine
 
 ### Run eslint
 
